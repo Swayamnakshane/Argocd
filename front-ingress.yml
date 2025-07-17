@@ -10,7 +10,7 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - "34.219.21.193.nip.io"
+        - "3.145.103.155.nip.io"
       secretName: examportal-tls
   rules:
     - host: "34.219.21.193.nip.io"
