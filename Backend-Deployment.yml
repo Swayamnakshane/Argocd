@@ -4,7 +4,7 @@ metadata:
   name: backend-deployment
   namespace: exam
   labels:
-    app: examb
+    app: exam
 spec:
   replicas: 3
   strategy:
