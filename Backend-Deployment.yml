@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: back-cont
-        image: swayamnakshane/myback9:latest
+        image: swayamnakshane/myback11:latest
         ports:
         - containerPort: 5000
         env:
