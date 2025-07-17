@@ -13,7 +13,7 @@ spec:
         - "3.145.103.155.nip.io"
       secretName: examportal-tls
   rules:
-    - host: "34.219.21.193.nip.io"
+    - host: "3.145.103.155.nip.io"
       http:
         paths:
           - path: /
