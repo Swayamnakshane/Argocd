@@ -10,11 +10,11 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "3.145.103.155.nip.io"
+    - host: "af710c9ff2fa94811bf8e17a3a490fa1-1054419295.us-east-2.elb.amazonaws.com"
       http:
         paths:
           - path: /back(/|$)(.*)
-            pathType: ImplementationSpecific
+            pathType: prefix
             backend:
               service:
                 name: backend-svc
