@@ -10,10 +10,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - "3.145.103.155.nip.io"
+        - "af710c9ff2fa94811bf8e17a3a490fa1-1054419295.us-east-2.elb.amazonaws.com"
       secretName: examportal-tls
   rules:
-    - host: "3.145.103.155.nip.io"
+    - host: "af710c9ff2fa94811bf8e17a3a490fa1-1054419295.us-east-2.elb.amazonaws.com"
       http:
         paths:
           - path: /
