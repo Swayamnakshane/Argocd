@@ -33,14 +33,7 @@ spec:
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
-  volumeClaimTemplates:
-  - metadata:
-      name: mysql-persistent-storage
-    spec:
-      accessModes:
-        - ReadWriteOnce
-      storageClassName: standard
-      resources:
-        requests:
-          storage: 15Gi
-
+      volumes:  
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: exam-pvc
