@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: front-cont
-        image: swayamnakshane/myfront8:latest
+        image: swayamnakshane/myfront10:latest
         ports:
         - containerPort: 3000
         resources:
