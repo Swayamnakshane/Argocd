@@ -1,13 +1,11 @@
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: dash-pv
-  namespace: dash2
+  name: mongo-data
 spec:
-  capacity:
-    storage: 15Gi
   accessModes:
     - ReadWriteOnce
-  storageClassName: standard
+  capacity:
+    storage: 1Gi
   hostPath:
-    path: '/tmp/sim-data'
+    path: /data/mongo
