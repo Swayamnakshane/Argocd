@@ -2,7 +2,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: backend-hpa
-  namespace: dash  # Updated to match Deployment namespace
+  namespace: dash22  # Updated to match Deployment namespace
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

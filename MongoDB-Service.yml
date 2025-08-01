@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mongosvc
-  namespace: dash
+  namespace: dash2
   labels:
     app: mongodb
 spec:

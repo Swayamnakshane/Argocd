@@ -2,7 +2,7 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: dash-pv
-  namespace: dash
+  namespace: dash2
 spec:
   capacity:
     storage: 15Gi

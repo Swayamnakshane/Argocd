@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: back-svc
-  namespace: dash 
+  namespace: dash2 
 spec:
   selector:
     app: back

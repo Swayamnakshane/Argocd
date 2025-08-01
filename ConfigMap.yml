@@ -2,7 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: dash-configmap
-  namespace: dash
+  namespace: dash2
 data:
   MONGODB_URI: mongodb://madhu:Madhu%40555@mongosvc:27017/employee_management?authSource=admin
   
