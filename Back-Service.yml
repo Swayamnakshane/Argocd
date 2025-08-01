@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: back-svc
+  namespace: dash 
+spec:
+  selector:
+    app: back
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 5000      
+      targetPort: 5000  
+      nodePort: 30080   
+
