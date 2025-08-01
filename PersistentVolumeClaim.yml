@@ -1,12 +1,12 @@
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
-  name: dash-pvc
-  namespace: dash2
+  name: pvc
 spec:
-  storageClassName: gp3
+  storageClassName: ""
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteOnce 
+  volumeName: pv
   resources:
     requests:
-      storage: 15Gi
+      storage: 10Gi
