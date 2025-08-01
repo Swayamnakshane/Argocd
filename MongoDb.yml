@@ -38,7 +38,7 @@ spec:
       volumes:  # ✅ moved inside template.spec
         - name: mongodb-storage
           persistentVolumeClaim:
-            claimName: dash-pvc
+            claimName: pvc
 
 
 
