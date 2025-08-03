@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: swayamnakshane/f3025:latest
+        image: swayamnakshane/f30825:latest
         ports:
         - containerPort: 3000
         resources:
