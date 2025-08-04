@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: backend-pod
-          image: swayamnakshane/b40825:latest
+          image: swayamnakshane/b40826:latest
           ports:
             - containerPort: 5000
           env:
