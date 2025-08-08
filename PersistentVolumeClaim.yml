@@ -1,13 +1,29 @@
+# pvc.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: pvc
   namespace: dash2
 spec:
-  storageClassName: standard
   accessModes:
-    - ReadWriteOnce 
-  volumeName: mongo-data
+    - ReadWriteOnce
+  storageClassName: ebs-sc
   resources:
     requests:
       storage: 10Gi
+
+
+
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: pvc
+#   namespace: dash2
+# spec:
+#   storageClassName: standard
+#   accessModes:
+#     - ReadWriteOnce 
+#   volumeName: mongo-data
+#   resources:
+#     requests:
+#       storage: 10Gi
