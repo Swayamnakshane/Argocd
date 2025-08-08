@@ -33,12 +33,62 @@ spec:
                   name: dash-secret
                   key: MONGO_INITDB_ROOT_USERNAME
           volumeMounts:
-            - name: mongodb-storage  # ✅ matches the volume name
+            - name: mongodb-storage
               mountPath: /data/db
-      volumes:  # ✅ moved inside template.spec
-        - name: mongodb-storage
-          persistentVolumeClaim:
-            claimName: pvc
+  volumeClaimTemplates:   # ✅ Instead of defining PVC in pod spec, let StatefulSet create one
+    - metadata:
+        name: mongodb-storage
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: ebs-sc  # ✅ Use EBS storage class
+        resources:
+          requests:
+            storage: 10Gi
+
+
+
+# apiVersion: apps/v1
+# kind: StatefulSet
+# metadata:
+#   name: mongodb-deployment
+#   namespace: dash2
+#   labels:
+#     app: mongodb
+# spec:
+#   serviceName: mongosvc
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: mongodb
+#   template:
+#     metadata:
+#       labels:
+#         app: mongodb
+#     spec:
+#       containers:
+#         - name: mongodb-pod
+#           image: mongo:latest
+#           ports:
+#             - containerPort: 27017
+#           env:
+#             - name: MONGO_INITDB_ROOT_PASSWORD
+#               valueFrom:
+#                 secretKeyRef:
+#                   name: dash-secret
+#                   key: MONGO_INITDB_ROOT_PASSWORD
+#             - name: MONGO_INITDB_ROOT_USERNAME
+#               valueFrom:
+#                 secretKeyRef:
+#                   name: dash-secret
+#                   key: MONGO_INITDB_ROOT_USERNAME
+#           volumeMounts:
+#             - name: mongodb-storage  # ✅ matches the volume name
+#               mountPath: /data/db
+#       volumes:  # ✅ moved inside template.spec
+#         - name: mongodb-storage
+#           persistentVolumeClaim:
+#             claimName: pvc
 
 
 
