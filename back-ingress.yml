@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "examportal.aswa.site"
+    - host: "asses.arcapreit.com"
       http:
         paths:
           - path: /back(/|$)(.*)
