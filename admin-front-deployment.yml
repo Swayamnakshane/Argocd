@@ -1,34 +1,34 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: admin-deployment
-  namespace: dash2
-  labels:
-    app: frontadmin
-spec:
-  replicas: 3
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
-  selector:
-    matchLabels:
-      app: frontadmin
-  template:
-    metadata:
-      labels:
-        app: frontadmin
-    spec:
-      containers:
-      - name: admin
-        image: swayamnakshane/admin2025:latest
-        ports:
-        - containerPort: 3000
-        resources:
-          requests:
-            cpu: "200m"
-            memory: "256Mi"
-          limits:
-            cpu: "500m"
-            memory: "512Mi"
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: admin-deployment
+#   namespace: dash2
+#   labels:
+#     app: frontadmin
+# spec:
+#   replicas: 3
+#   strategy:
+#     type: RollingUpdate
+#     rollingUpdate:
+#       maxSurge: 1
+#       maxUnavailable: 0
+#   selector:
+#     matchLabels:
+#       app: frontadmin
+#   template:
+#     metadata:
+#       labels:
+#         app: frontadmin
+#     spec:
+#       containers:
+#       - name: admin
+#         image: swayamnakshane/admin2025:latest
+#         ports:
+#         - containerPort: 3000
+#         resources:
+#           requests:
+#             cpu: "200m"
+#             memory: "256Mi"
+#           limits:
+#             cpu: "500m"
+#             memory: "512Mi"
