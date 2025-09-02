@@ -1,3 +1,18 @@
+volumeClaimTemplates:
+- metadata:
+    name: mongodb-storage
+  spec:
+    accessModes: ["ReadWriteOnce"]
+    storageClassName: ebs-sc
+    resources:
+      requests:
+        storage: 10Gi
+
+
+
+
+
+
 # # pvc.yaml
 # apiVersion: v1
 # kind: PersistentVolumeClaim
