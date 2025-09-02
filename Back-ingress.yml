@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "dashboard.arcapreit.com"
+    - host: "dash.aswa.site"
       http:
         paths:
           - path: /back(/|$)(.*)
