@@ -4,18 +4,18 @@
 
 
 # pvc.yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc
-  namespace: dash2
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: ebs-sc
-  resources:
-    requests:
-      storage: 10Gi
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: pvc
+#   namespace: dash2
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: ebs-sc
+#   resources:
+#     requests:
+#       storage: 10Gi
 
 
 
