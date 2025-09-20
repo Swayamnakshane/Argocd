@@ -17,11 +17,10 @@ spec:
     - host: "asses.shamgar.online"
       http:
         paths:
-          - path: /
+          - path: /(.*)
             pathType: Prefix
             backend:
               service:
                 name: front-svc
                 port:
                   number: 3000
-
