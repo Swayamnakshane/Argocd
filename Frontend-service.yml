@@ -6,7 +6,7 @@ metadata:
   labels:
     app: examc
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: examc
   ports:
