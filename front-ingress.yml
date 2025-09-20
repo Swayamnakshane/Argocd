@@ -10,10 +10,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - "asses.arcapreit.com"
+        - "asses.shamgar.online"
       secretName: examportal-tls
   rules:
-    - host: "asses.arcapreit.com"
+    - host: "asses.shamgar.online"
       http:
         paths:
           - path: /
